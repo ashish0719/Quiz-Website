@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knowledge Stack</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+
+    <div class="container">
+      <!-- Welcome Screen -->
+      <div id="welcome-screen" class="screen active">
+        <div class="glass-card welcome-card">
+          <h1>🧠 Test Your Tech</h1>
+
+          <div class="categories">
+            <div class="category-item">
+              <span class="icon">🗄️</span>
+              <span>SQL</span>
+              <span class="count">10 Questions</span>
+            </div>
+            <div class="category-item">
+              <span class="icon">💻</span>
+              <span>Programming</span>
+              <span class="count">10 Questions</span>
+            </div>
+            <div class="category-item">
+              <span class="icon">🌐</span>
+              <span>Networking</span>
+              <span class="count">10 Questions</span>
+            </div>
+            <div class="category-item">
+              <span class="icon">⚙️</span>
+              <span>Operating Systems</span>
+              <span class="count">10 Questions</span>
+            </div>
+          </div>
+          <button id="start-btn" class="btn-primary">Start Quiz</button>
+        </div>
+      </div>
+
+      <!-- Category Selection -->
+      <div id="category-screen" class="screen">
+        <div class="glass-card category-card">
+          <h2>Choose Your Category</h2>
+          <div class="category-grid">
+            <button class="category-btn" data-category="sql">
+              <span class="icon">🗄️</span>
+              <span class="title">SQL</span>
+              <span class="subtitle">Database Queries</span>
+            </button>
+            <button class="category-btn" data-category="programming">
+              <span class="icon">💻</span>
+              <span class="title">Programming</span>
+              <span class="subtitle">Code & Logic</span>
+            </button>
+            <button class="category-btn" data-category="networking">
+              <span class="icon">🌐</span>
+              <span class="title">Networking</span>
+              <span class="subtitle">Networks & Protocols</span>
+            </button>
+            <button class="category-btn" data-category="os">
+              <span class="icon">⚙️</span>
+              <span class="title">Operating Systems</span>
+              <span class="subtitle">OS Concepts</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div id="quiz-screen" class="screen">
+        <div class="quiz-header">
+          <div class="glass-card header-card">
+            <div class="quiz-info">
+              <span id="category-name">Category</span>
+              <span id="question-counter">1 / 10</span>
+            </div>
+            <div class="timer-container">
+              <div class="timer-circle">
+                <span id="timer">30</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-container">
+          <div class="glass-card question-card">
+            <h3 id="question-text">Question will appear here</h3>
+            <div class="options-container">
+              <button class="option-btn" data-option="0">Option A</button>
+              <button class="option-btn" data-option="1">Option B</button>
+              <button class="option-btn" data-option="2">Option C</button>
+              <button class="option-btn" data-option="3">Option D</button>
+            </div>
+            <button id="next-btn" class="btn-primary" style="display: none">
+              Next Question
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Screen -->
+      <div id="results-screen" class="screen">
+        <div class="glass-card results-card">
+          <h2>🎉 Quiz Complete!</h2>
+          <div class="score-display">
+            <div class="score-circle">
+              <span id="final-score">0</span>
+              <span class="score-total">/ 10</span>
+            </div>
+          </div>
+          <div class="score-details">
+            <div class="detail-item">
+              <span class="label">Category:</span>
+              <span id="result-category">-</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Correct Answers:</span>
+              <span id="correct-count">0</span>
+            </div>
+            <div class="detail-item">
+              <span class="label">Accuracy:</span>
+              <span id="accuracy">0%</span>
+            </div>
+          </div>
+          <div class="result-actions">
+            <button id="retry-btn" class="btn-secondary">Try Again</button>
+            <button id="home-btn" class="btn-primary">Home</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
